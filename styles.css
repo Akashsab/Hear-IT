@@ -1,0 +1,177 @@
+/* Background animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Apply the moving gradient to the body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #121212, #c51818,#121212, #b10404);
+    background-size: 400% 400%;
+    animation: gradientMove 4s ease infinite;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.player-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 900px;
+    width: 100%;
+}
+
+.left-section {
+    width: 30%;
+    background: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.player {
+    width: 60%;
+    padding: 20px;
+    background: #282828;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.song-info img {
+    width: 50%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.song-info h2, .song-info h3 {
+    margin: 10px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.controls button {
+    font-size: 18px;
+    padding: 10px;
+    background: linear-gradient(to right, #c51818, #121212);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+    background: linear-gradient(to right,#121212,#c51818);
+    transform: scale(1.1);
+}
+
+#playlists-container, #new-playlist-name, #playlist-select, #song-input, #create-playlist-btn {
+    margin-bottom: 10px;
+}
+
+#playlists-container {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #444;
+    padding: 10px;
+    background: #333;
+    border-radius: 10px;
+}
+
+#new-playlist-name, #playlist-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+#create-playlist-btn, #song-input[type="file"] {
+    padding: 10px;
+    background: linear-gradient(to right,#c51818, #121212);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 14px;
+    text-align: center;
+}
+
+#create-playlist-btn:hover, #song-input[type="file"]:hover {
+    background: linear-gradient(to right,#121212,#c51818);
+    transform: scale(1.05);
+}
+#progress-bar {
+    width: 300px;
+    appearance: none;
+    background: linear-gradient(to right, #c51818, #121212);
+    height: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+
+#progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #c51818;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+#progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #c51818;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+/* Same button styling as other buttons */
+.delete-btn {
+    font-size: 14px;
+    padding: 10px;
+    background: linear-gradient(to right, #c51818, #121212);
+    color: white;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-left: 150px;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(to right,#121212,#c51818);
+    transform: scale(1.1);
+}
