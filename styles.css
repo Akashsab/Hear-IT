@@ -175,3 +175,18 @@ header {
     background: linear-gradient(to right,#121212,#c51818);
     transform: scale(1.1);
 }
+@media (max-width: 768px) {
+    .player-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .player {
+        width: 100%;
+        margin: 0;
+    }
+
+    .song-info img {
+        width: 50%;
+    }
+}
